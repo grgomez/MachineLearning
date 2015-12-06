@@ -1,67 +1,82 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Udacity Machine Learning Report #1
-% Predicting Boston Housing
+% Predicting Boston Housing Prices
 % Author: German R. Gomez Urbina
 %
-% Based on University/School Laboratory Report
-% LaTeX Template
-% Version 3.1 (25/3/14)
-% source: http://LaTeXTemplates.com
 %
-% Original Author:
-% Linux and Unix Users Group at Virginia Tech Wiki 
-% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%--------------------------------------------------
+%-------------------------------------------------
 % PACKAGES AND DOCUMENT CONFIGURATION
-%--------------------------------------------------
-
+%-------------------------------------------------
 \documentclass{article}
+
+\usepackage{booktabs}
+
 
 %-------------------------------------------------
 % DOCUMENT INFORMATION
 %-------------------------------------------------
-
-\title{Udacity Machine Learning Report \romannumeral1 - Predicting Boston Housing Prices} % TITLE
+\title{Udacity Machine Learning Report \#1 - Predicting Boston Housing Prices} % TITLE
 
 \author{German R. \textsc{Gomez Urbina}} % AUTHOR NAME
 
-\date{\today}
+
+
 
 \begin{document}
 
-\maketitle % INSERT THE TITLE, AUTHOR AND DATE
+\pagenumbering{gobble}
 
-%-----------------------------------------------
-% QUESTION #1
-%-----------------------------------------------
+\maketitle
 
+\newpage
+
+\pagenumbering{arabic}
+
+%------------------------------------------------------
+% FIRST SECTION
+%------------------------------------------------------
 \section{Statistical Analysis and Data Exploration}
 
-% Table showing Statistical findings
-% formatting source: www.latex-tutorial.com/tutorials/beginners/latex-tables/
-\begin{table}{h!}
-  \centering
-  \caption{Statistical Analysis and Data Exploration}
-  \label{tab:table1}
-  \begin{tabular}{ccc}
+% Adding tables with results
+\begin{table}[h!]
+\centering
+\caption{Statistical Analysis.}
+\label{tab:table1}
+\begin{tabular}{cc}
 
-    \toprule
-    % This top can be blank (for now)
-    
-    \midrule
-    Number of data points (houses) & 50
-    Number of features & 9,000
-    Minimum and maximum housing prices & 1,000,000.00
-    Mean & 500,000.00
-    Median & 500,000.00
-    Standard Deviation & 20,000.00
-    
-    \bottomrule
+\toprule
 
-  \end{tabular}
+\midrule
+Number of data points (houses) & 50\\
+Number of features & 9,000\\
+Minimum and maximum housing prices & 1,000,000.00\\
+Mean & 500,000.00\\
+Median & 500,000.00\\
+Standard Deviation & 20,000.00\\
+
+\bottomrule
+
+\end{tabular}
 \end{table}
+
+%--------------------------------------------------
+% SECOND SECTION
+%--------------------------------------------------
+\section[Evaluating Model Performance]
+
+
+
+%--------------------------------------------------
+% THIRD SECTION
+%--------------------------------------------------
+\section[Analyzing Model Performance]
+
+
+%--------------------------------------------------
+% FOURTH SECTION
+%-------------------------------------------------
+\section[Model Prediction]
 
 \end{document}
