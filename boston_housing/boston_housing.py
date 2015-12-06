@@ -29,15 +29,18 @@ def explore_city_data(city_data):
     ### Step 1. YOUR CODE GOES HERE ###
     ###################################
 
-    # Please calculate the following values using the Numpy library
-    # Size of data?
-    # Number of features?
-    # Minimum value?
-    # Maximum Value?
-    # Calculate mean?
-    # Calculate median?
-    # Calculate standard deviation?
-
+    # Number of houses and number of features
+    num_houses, num_features = housing_features.shape
+    # Minimum value 
+    min_house_price = housing_prices.min()
+    # Maximum value
+    max_house_price = housing_prices.max()
+    # Calculate mean
+    mean_house_price = np.mean(housing_prices)
+    # Calculate median
+    median_house_price = np.median(housing_prices)
+    # Calculate standard deviation
+    std_dev_house_price = np.std(housing_prices)
 
 def performance_metric(label, prediction):
     """Calculate and return the appropriate performance metric."""
