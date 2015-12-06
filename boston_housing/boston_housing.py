@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeRegressor
 ################################
 ### ADD EXTRA LIBRARIES HERE ###
 ################################
-
+import csv
 
 def load_data():
     """Load the Boston dataset."""
@@ -41,6 +41,18 @@ def explore_city_data(city_data):
     median_house_price = np.median(housing_prices)
     # Calculate standard deviation
     std_dev_house_price = np.std(housing_prices)
+
+    # Output results into CSV file for LaTeX
+    csv_file = open('housing_statistics.csv', 'w')
+    csv_write = csv.writer(csv_file)
+    data = [['Number of Houses', 'Number of Features', 'Minimum House Price',
+             'Maximum House Price', 'Mean House Price', 'Median House Price',
+             'Std. Deviation House Price'], [num_houses, num_features,
+             min_house_price, max_house_price, mean_house_price,
+             median_house_price, std_dev_house_price]]
+    csv_write.writerows(data)
+    csv_file.close()
+
 
 def performance_metric(label, prediction):
     """Calculate and return the appropriate performance metric."""
